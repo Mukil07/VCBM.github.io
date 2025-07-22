@@ -194,6 +194,101 @@
 </section>
 <!-- End paper abstract -->
 
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  th, td {
+    border: 1px solid #999;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .section-title {
+    font-weight: bold;
+    text-align: left;
+    background-color: #eee;
+  }
+
+  .highlight {
+    font-weight: bold;
+  }
+
+  .dash {
+    color: #888;
+  }
+</style>
+
+<table>
+  <tr>
+    <th rowspan="2">Model</th>
+    <th colspan="2">Action</th>
+    <th colspan="4">ego-vehicle eXplanation</th>
+  </tr>
+  <tr>
+    <th>Acc</th>
+    <th>F1</th>
+    <th>Acc</th>
+    <th>F1</th>
+    <th>F1<sub>(mac)</sub></th>
+    <th>F1<sub>(mic)</sub></th>
+  </tr>
+
+  <!-- woB rows -->
+  <tr>
+    <td>I3D woB <sup>[4]</sup></td>
+    <td>74.78</td><td>74.21</td>
+    <td class="dash">–</td><td class="dash">–</td><td class="dash">–</td><td class="dash">–</td>
+  </tr>
+  <tr>
+    <td>VideoMAE woB <sup>[35]</sup></td>
+    <td>72.5</td><td>71.81</td>
+    <td class="dash">–</td><td class="dash">–</td><td class="dash">–</td><td class="dash">–</td>
+  </tr>
+  <tr>
+    <td>MViTv2 woB <sup>[19]</sup></td>
+    <td>64.03</td><td>63.98</td>
+    <td class="dash">–</td><td class="dash">–</td><td class="dash">–</td><td class="dash">–</td>
+  </tr>
+
+  <!-- wB rows -->
+  <tr>
+    <td>I3D wB <sup>[4]</sup></td>
+    <td>74.09</td><td>73.47</td>
+    <td>25.26</td><td>36.73</td><td>18.53</td><td>43.49</td>
+  </tr>
+  <tr>
+    <td>VideoMAE wB <sup>[35]</sup></td>
+    <td>67.01</td><td>66.48</td>
+    <td>24.21</td><td>32.18</td><td>23.77</td><td>41.53</td>
+  </tr>
+  <tr>
+    <td>MViTv2 wB <sup>[19]</sup></td>
+    <td>63.29</td><td>62.47</td>
+    <td>23.56</td><td>31.77</td><td>23.4</td><td>42.1</td>
+  </tr>
+
+  <!-- Ours -->
+  <tr class="highlight">
+    <td>I3D + LTM wB (Ours)</td>
+    <td>73.21</td><td>72.2</td>
+    <td>28.31</td><td>39.43</td><td>24.1</td><td>44.06</td>
+  </tr>
+  <tr class="highlight">
+    <td>MViTv2 + LTM wB (Ours)</td>
+    <td>69.73</td><td>69.15</td>
+    <td>31.22</td><td>43.86</td><td>29.17</td><td>49.11</td>
+  </tr>
+</table>
+
 
 
 <!--BibTex citation -->
