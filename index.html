@@ -225,7 +225,122 @@ Our project dives deep into interpretable DIP models—designing systems that no
 
   </p>
 </div>
-  
+
+
+<style>
+  .table-wrapper {
+    max-width: 950px;
+    margin: 40px auto;
+    overflow-x: auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+
+  th, td {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+
+  .green-check {
+    color: green;
+    font-weight: bold;
+  }
+
+  .red-cross {
+    color: red;
+    font-weight: bold;
+  }
+
+  .dataset-name {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .ours {
+    background-color: #f0f8ff;
+    font-weight: bold;
+  }
+
+  .note {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+  }
+</style>
+
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Dataset</th>
+      <th>#In-cabin view</th>
+      <th>#Out-cabin view</th>
+      <th>Multimodal data</th>
+      <th>Video data</th>
+      <th>Eye-gaze</th>
+      <th>eX-Annotation</th>
+      <th>eX-Temporal / Frame</th>
+      <th>eX-Scene</th>
+      <th>eX-Pose</th>
+      <th>eX-Semantic</th>
+      <th>eX-Causality</th>
+    </tr>
+
+    <tr>
+      <td class="dataset-name">HDD <sup>[24]</sup></td>
+      <td>0</td><td>1</td><td>No</td><td><span class="green-check">✓</span></td><td><span class="red-cross">✗</span></td>
+      <td>N/A</td><td>N/A</td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td>
+    </tr>
+    <tr>
+      <td class="dataset-name">ROAD <sup>[31]</sup></td>
+      <td>0</td><td>1</td><td>No</td><td><span class="green-check">✓</span></td><td><span class="red-cross">✗</span></td>
+      <td>N/A</td><td>N/A</td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td>
+    </tr>
+    <tr>
+      <td class="dataset-name">Dr(eye) <sup>[8]</sup></td>
+      <td>1</td><td>1</td><td>Yes</td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td>
+      <td>N/A</td><td>N/A</td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td>
+    </tr>
+    <tr>
+      <td class="dataset-name">DAAD <sup>[39]</sup></td>
+      <td>2</td><td>4</td><td>Yes</td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td>
+      <td>N/A</td><td>N/A</td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td>
+    </tr>
+    <tr>
+      <td class="dataset-name">BDD-OIA</td>
+      <td>0</td><td>1</td><td>No</td><td><span class="green-check">✓</span></td><td><span class="red-cross">✗</span></td>
+      <td>Categorical</td><td>Frame</td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td><td><span class="red-cross">✗</span></td>
+    </tr>
+    <tr>
+      <td class="dataset-name">BDD-X <sup>[15]</sup></td>
+      <td>0</td><td>1</td><td>No</td><td><span class="green-check">✓</span></td><td><span class="red-cross">✗</span></td>
+      <td>Contextual</td><td>Temporal</td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td>
+    </tr>
+    <tr class="ours">
+      <td class="dataset-name">DAAD-X <br><small>(Ours)</small></td>
+      <td>2</td><td>4</td><td>Yes</td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td>
+      <td>Categorical</td><td>Temporal</td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td><td><span class="green-check">✓</span></td>
+    </tr>
+  </table>
+  <div class="note">*eX means explanation</div>
+</div>
 
 <style>
   .table-container {
