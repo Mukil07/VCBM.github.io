@@ -517,28 +517,68 @@
   
 <!--End BibTex citation -->
 
+.bibtex-box {
+  border-radius: 12px;
+  padding: 24px;
+  background: #fafafa;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
 
-  <footer class="footer">
+.bibtex-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bibtex-icon {
+  font-size: 24px;
+}
+
+.bibtex-code {
+  background: #1e1e1e;
+  color: #e6e6e6;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.4;
+}
+<section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
-          <h2 class="title is-3">Visualization</h2>
-          <p>
-            @inproceedings{karuppasamy2025towards,
-            title={Towards Safer and Understandable Driver Intention Prediction},
-            author={Karuppasamy, Mukilan and Gangisetty, Shankar and Rai, Shyam Nandan and Masone, Carlo and Jawahar, CV},
-            booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-            pages={25378--25387},
-            year={2025}
-          }
+
+        <div class="box bibtex-box">
+
+          <!-- Header -->
+          <div class="bibtex-header">
+            <span class="bibtex-icon">📚</span>
+            <h2 class="title is-4">BibTeX Citation</h2>
+          </div>
+
+          <!-- Description -->
+          <p class="subtitle is-6">
+            If you use this work, please cite our paper:
           </p>
 
+          <!-- BibTeX Code Block -->
+          <pre class="bibtex-code">
+@inproceedings{karuppasamy2025towards,
+  title={Towards Safer and Understandable Driver Intention Prediction},
+  author={Karuppasamy, Mukilan and Gangisetty, Shankar and Rai, Shyam Nandan and Masone, Carlo and Jawahar, CV},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages={25378--25387},
+  year={2025}
+}
+          </pre>
+
         </div>
+
       </div>
     </div>
   </div>
-</footer>
+</section>
 
 <!-- Statcounter tracking code -->
   
